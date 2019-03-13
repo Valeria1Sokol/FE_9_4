@@ -3,7 +3,11 @@
     padding: 0;
 }
 
+
 /* cyrillic-ext */
+
+
+/*
 @font-face {
     font-family: 'Open Sans';
     font-style: normal;
@@ -11,6 +15,7 @@
     src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFWJ0bbck.woff2) format('woff2');
     unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
 }
+*/
 
 body {
     font-family: 'Open Sans';
@@ -34,7 +39,6 @@ header {
     letter-spacing: 5px;
     text-transform: uppercase;
     cursor: pointer;
-
 }
 
 .logo a:active,
@@ -44,7 +48,6 @@ header {
 }
 
 li {
-
     list-style: none;
     font-size: 1vw;
     margin: 0 0vw 0 5vw;
@@ -87,7 +90,6 @@ section {
     font-size: 7.2vw;
     letter-spacing: 8px;
     margin: 0 2vw 0 1vw;
-
 }
 
 .main .text p {
@@ -106,7 +108,6 @@ section {
     margin: 0 0 3.5vw;
     cursor: pointer;
     outline: none;
-
 }
 
 .main div {
@@ -174,23 +175,66 @@ section {
     font-weight: bold;
 }
 
-.box2 div {
+.box2 .block {
     display: flex;
     flex-direction: row;
     align-items: center;
     padding: 0 0 1.2vw;
 }
 
-.box2 img {
+.box2 .image {
     width: 81vw;
     height: 23vw;
+    background-image: url(../img/sample.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+.image span,
+.image2 span {
+    border: 2px solid white;
+    padding: 2px 7px;
+    background-color: rgba(0, 0, 0, 0.37);
+    font-size: 16px;
+    width: fit-content;
+    cursor: pointer;
+}
+
+.image p, .image2 p {
+    width: 100%!important;
+    text-align: left;
+    box-sizing: border-box;
+    padding: 0!important;
+}
+
+.shadow {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 25px 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.box2 .image2 {
+    width: 81vw;
+    height: 23vw;
+    background-image: url(../img/sample3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
 }
 
 .box2 p {
     font-size: 1.15vw;
     width: 49%;
-    padding: 0 0 0 1vw;
+    padding: 0 1vw;
 }
+
 
 .box3 {
     background-color: white;
@@ -207,6 +251,7 @@ section {
     margin-top: 1.1vw;
     font-size: 1.5vw;
     outline: none;
+    padding: 0 0 0 20px;
 }
 
 .box3 input[type='text']:active {
@@ -220,15 +265,20 @@ section {
 }
 
 .box3 h3 span {
-
     font-weight: bold;
     color: #343638;
+}
+.box3 div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 0 1.2vw;
 }
 
 .box3 input[type='button'] {
     letter-spacing: 1px;
     width: 8.2vw;
-    height: 4.6vw;
+    height: 4.7vw;
     margin-top: 1.1vw;
     background-color: #343638;
     color: #F3F3F3;
@@ -248,6 +298,7 @@ section {
 
 .box4 div {
     width: 25%;
+    padding: 0 10px 0 0;
 }
 
 .box4 h3 {
@@ -326,39 +377,34 @@ footer {
 }
 
 .footer .menu li {
-
     font-size: 1vw;
     margin: 0 0vw 0 2vw;
 }
-@media all and (max-width: 1440px) 
-{
-    header
-    {
-            padding: 58px 55px 58px 50px;
-    }
-      .box1
-    {
-            padding: 8.5vw 55px 10vw 50px;
-    }
-       .box2
-    {
-            padding: 11vw 55px 5vw 50px;
-    }
-       .box4
-    {
-            padding: 7.5vw 55px 0vw 50px;
-    }
-       footer
-    {
-            padding: 7.5vw 55px 0vw 50px;
-    }
 
+@media all and (max-width: 1440px) {
+    header {
+        padding: 58px 55px 58px 50px;
+    }
+    .box1 {
+        padding: 8.5vw 55px 10vw 50px;
+    }
+    .box2 {
+        padding: 11vw 55px 5vw 50px;
+    }
+    .box4 {
+        padding: 7.5vw 55px 0vw 50px;
+    }
+    footer {
+        padding: 7.5vw 55px 0vw 50px;
+    }
+    .box3 input[type='text'] {
+    width: 50vw;
 }
-@media all and (max-width: 1440px) 
-{
-   
+}
+
+@media all and (max-width: 1440px) {
     .box2 img {
-    width: 55vw;
-    height: 23vw;
-}
+        width: 55vw;
+        height: 23vw;
+    }
 }
